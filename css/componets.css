@@ -1,0 +1,154 @@
+/* =========================
+   COMPONENTS.CSS
+   ========================= */
+
+/* ---------- Cards ---------- */
+.card {
+  background: #f6f4ef; /* matcher sidebaggrund */
+  border: 1px solid rgba(0, 0, 0, 0.03); /* meget diskret struktur */
+  border-radius: 10px;
+  padding: 12px;
+}
+
+/* Cards i grid – ekstra ro */
+.grid .card {
+  border-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Opskrifts-/info-kort */
+.recipe.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 16px;
+}
+
+/* Billede/ikon øverst i card */
+.recipe.card > img:first-child,
+.recipe.card .recipe-icon {
+  align-self: center;
+  width: 160px;
+  height: auto;
+  margin-bottom: 8px;
+}
+
+/* Skub bundtekst ned så cards matcher i højde */
+.recipe.card .note,
+.recipe.card .method {
+  margin-top: auto;
+}
+
+/* ---------- Link-box (CTA) ---------- */
+.link-box {
+  display: inline-block;
+  padding: 12px 16px;
+  border: 1px solid #111;
+  border-radius: 0;
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 1;
+  color: #111;
+  background: transparent;
+  transition: transform 120ms ease, filter 120ms ease;
+}
+
+.link-box:hover,
+.link-box:focus-visible {
+  transform: translateY(-1px);
+}
+
+/* Grøn variant */
+.link-box--recipes {
+  background: #88d886;
+  border-color: #88d886;
+  color: #111;
+}
+
+.link-box--recipes:hover {
+  filter: brightness(0.95);
+}
+
+/* ---------- Navigation CTA ---------- */
+.nav-cta {
+  margin-left: auto;
+  display: inline-block;
+  padding: 10px 14px;
+  border: 1px solid #111;
+  border-radius: 0;
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+  line-height: 1;
+  background: transparent;
+}
+
+.nav-cta:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.nav-cta:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: 2px;
+}
+
+/* ---------- Feature list ---------- */
+.features {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+}
+
+.feature-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.feature-icon {
+  width: 56px;
+  height: auto;
+  display: block;
+}
+
+.feature-text h4 {
+  margin: 0 0 2px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.feature-text p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.feature-text a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+/* ---------- Footer icons ---------- */
+.site-footer .social {
+  display: inline-flex;
+  gap: 14px;
+}
+
+.site-footer .social-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  background: #b1b1b0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-footer .social-btn img {
+  width: 86px;
+  height: 86px;
+  display: block;
+}
