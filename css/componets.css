@@ -4,18 +4,16 @@
 
 /* ---------- Cards ---------- */
 .card {
-  background: #f6f4ef; /* matcher sidebaggrund */
-  border: 1px solid rgba(0, 0, 0, 0.03); /* meget diskret struktur */
+  background: #f6f4ef;
+  border: 1px solid rgba(0, 0, 0, 0.03);
   border-radius: 10px;
   padding: 12px;
 }
 
-/* Cards i grid – ekstra ro */
 .grid .card {
   border-color: rgba(0, 0, 0, 0.02);
 }
 
-/* Opskrifts-/info-kort */
 .recipe.card {
   display: flex;
   flex-direction: column;
@@ -23,7 +21,6 @@
   padding: 16px;
 }
 
-/* Billede/ikon øverst i card */
 .recipe.card > img:first-child,
 .recipe.card .recipe-icon {
   align-self: center;
@@ -32,7 +29,6 @@
   margin-bottom: 8px;
 }
 
-/* Skub bundtekst ned så cards matcher i højde */
 .recipe.card .note,
 .recipe.card .method {
   margin-top: auto;
@@ -57,11 +53,9 @@
   transform: translateY(-1px);
 }
 
-/* Grøn variant */
 .link-box--recipes {
   background: #88d886;
   border-color: #88d886;
-  color: #111;
 }
 
 .link-box--recipes:hover {
@@ -71,7 +65,6 @@
 /* ---------- Navigation CTA ---------- */
 .nav-cta {
   margin-left: auto;
-  display: inline-block;
   padding: 10px 14px;
   border: 1px solid #111;
   border-radius: 0;
@@ -110,7 +103,6 @@
 .feature-icon {
   width: 56px;
   height: auto;
-  display: block;
 }
 
 .feature-text h4 {
@@ -124,11 +116,6 @@
   margin: 0;
   font-size: 14px;
   line-height: 1.4;
-}
-
-.feature-text a {
-  color: inherit;
-  text-decoration: underline;
 }
 
 /* ---------- Footer icons ---------- */
@@ -147,8 +134,60 @@
   justify-content: center;
 }
 
-.site-footer .social-btn img {
-  width: 86px;
-  height: 86px;
-  display: block;
+/* =========================
+   Burger menu
+   ========================= */
+
+/* Desktop: ingen burger */
+.burger {
+  display: none;
+}
+
+/* Mobil */
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  /* Burger streger */
+  .burger span {
+    width: 24px;
+    height: 2px;
+    background-color: #111;
+    display: block;
+  }
+
+  /* Skjul menu */
+  nav {
+    display: none;
+    width: 100%;
+  }
+
+  /* Vis menu når aktiv */
+  nav.active {
+    display: block;
+  }
+
+  /* Mobil menu layout */
+  .nav {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 0;
+  }
+
+  .nav-cta {
+    margin-left: 0;
+    margin-top: 12px;
+  }
+}
+.card ul {
+  list-style-position: inside; /* bullets IND i boksen */
+  padding-left: 0;             /* ingen ekstra indryk */
+  margin-left: 0;
 }
